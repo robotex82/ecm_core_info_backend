@@ -1,0 +1,13 @@
+= table.column :name
+= table.column :version, as: :string
+= table.column :date
+= table.column :summary
+= table.column :licenses
+= table.column(:homepage) { |gem| link_to(gem.homepage) if gem.homepage.present? }
+= table.column :authors
+= table.column(:email) { |gem| gem.email.respond_to?(:collect) ? gem.email.collect { |email| mail_to(email) }.to_sentence.html_safe : mail_to(gem.email) }
+= table.column :requirements
+= table.column :required_ruby_version, as: :string
+= table.column :required_rubygems_version, as: :string
+= table.column :platform
+= table.column :executables
