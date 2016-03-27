@@ -12,7 +12,7 @@ module Ecm
         mattr_accessor :registered_controllers do
           lambda do
             [
-              Ecm::CoreInfo::Backend::EnginesController ,
+              Ecm::CoreInfo::Backend::EnginesController,
               Ecm::CoreInfo::Backend::GemsController 
             ]
           end
