@@ -7,7 +7,7 @@ module Ecm::CoreInfo
     end
 
     def self.all
-      ::Rails::Engine.subclasses.map(&:instance).sort_by {|obj| obj.class.name }
+      ::Rails::Engine.subclasses.map(&:instance).sort_by { |obj| obj.class.name }
     end
 
     def self.count

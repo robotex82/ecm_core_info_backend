@@ -13,7 +13,7 @@ module Ecm
           lambda do
             [
               Ecm::CoreInfo::Backend::EnginesController,
-              Ecm::CoreInfo::Backend::GemsController 
+              Ecm::CoreInfo::Backend::GemsController
             ]
           end
         end
