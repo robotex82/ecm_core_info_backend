@@ -13,7 +13,11 @@ module Ecm::CoreInfo::Backend
     end
 
     def collection_scope
-      Kaminari.paginate_array(Ecm::CoreInfo::Gem.find_all.to_a)
+      if Itsf::Backend.features?(:kaminari)
+        Kaminari.paginate_array(resource_class.find_all.to_a)
+      else
+        super
+      end
     end
 
     def load_resource

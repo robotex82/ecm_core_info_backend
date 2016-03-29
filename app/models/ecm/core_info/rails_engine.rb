@@ -17,5 +17,13 @@ module Ecm::CoreInfo
     def self.find(id)
       all.find { |i| i.class.to_s == id }
     end
+
+    def self.first
+      all.first
+    end
+
+    def self.last
+      all.last
+    end
   end
 end

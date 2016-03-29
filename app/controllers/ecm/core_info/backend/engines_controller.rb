@@ -7,7 +7,11 @@ module Ecm::CoreInfo::Backend
     private
 
     def collection_scope
-      Kaminari.paginate_array(Ecm::CoreInfo::RailsEngine.all)
+      if Itsf::Backend.features?(:kaminari)
+        Kaminari.paginate_array(resource_class.all)
+      else
+        super
+      end
     end
 
     def to_param_method
