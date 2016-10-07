@@ -1,0 +1,40 @@
+defaults:
+  permissions:
+    - ecm/core_info/backend/engine
+    - ecm/core_info/gem/index
+    - ecm/core_info/gem/show
+    - ecm/core_info/gem/new
+    - ecm/core_info/gem/create
+    - ecm/core_info/gem/edit
+    - ecm/core_info/gem/update
+    - ecm/core_info/gem/destroy
+    - ecm/core_info/rails_engine/index
+    - ecm/core_info/rails_engine/show
+    - ecm/core_info/rails_engine/new
+    - ecm/core_info/rails_engine/create
+    - ecm/core_info/rails_engine/edit
+    - ecm/core_info/rails_engine/update
+    - ecm/core_info/rails_engine/destroy
+  roles:
+    ecm/core_info/administrator:
+      - ecm/core_info/backend/engine
+      - ecm/core_info/gem/index
+      - ecm/core_info/gem/show
+      - ecm/core_info/gem/new
+      - ecm/core_info/gem/create
+      - ecm/core_info/gem/edit
+      - ecm/core_info/gem/update
+      - ecm/core_info/gem/destroy
+      - ecm/core_info/rails_engine/index
+      - ecm/core_info/rails_engine/show
+      - ecm/core_info/rails_engine/new
+      - ecm/core_info/rails_engine/create
+      - ecm/core_info/rails_engine/edit
+      - ecm/core_info/rails_engine/update
+      - ecm/core_info/rails_engine/destroy
+    ecm/core_info/reviewer:
+      - ecm/core_info/backend/engine
+      - ecm/core_info/gem/index
+      - ecm/core_info/gem/show
+      - ecm/core_info/rails_engine/index
+      - ecm/core_info/rails_engine/show
