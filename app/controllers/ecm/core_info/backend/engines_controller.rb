@@ -7,15 +7,23 @@ module Ecm::CoreInfo::Backend
     private
 
     def collection_scope
-      if Itsf::Backend.features?(:kaminari)
-        Kaminari.paginate_array(resource_class.all)
+      if features?(:kaminari)
+        Kaminari.paginate_array(resource_class.all).page(params[:page])
       else
-        super
+        resource_class.all
       end
+    end
+
+    def load_collection
+      collection_scope
     end
 
     def to_param_method
       :class
+    end
+
+    def disabled_features
+      [:ransack]
     end
   end
 end
