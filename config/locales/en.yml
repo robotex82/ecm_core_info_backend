@@ -2,5 +2,4 @@ en:
   classes:
     ecm/core_info/backend/engine: 'System Core Info'
   routes:
-    mount:
-      ecm_core_info_backend: '/backend/core-info'
+    ecm_core_info_backend_engine: 'core-info'
